@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <log-dir>
+        <dir>D:/software_installed/tomcat-6.0.29-8080/logs</dir>
+        <filter>*.log</filter>
+    </log-dir>
+    <log-files>
+        <file>D:/software_installed/tomcat-6.0.29-8080/logs/tomcat.log</file>
+        <file>D:/software_installed/tomcat-6.0.29-8080/logs/localhost_access_log.2016-07-19.txt</file>
+    </log-files>
+</config>

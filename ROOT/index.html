@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>Log Viewer</title>
+    <link type="text/css" href="style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="script/util.js"></script>
+    <script type="text/javascript" src="dwr/interface/LogManager.js"></script>
+    <script type="text/javascript" src="dwr/engine.js"></script>
+    <script type="text/javascript" src="script/logviewer.js"></script>
+    <meta http-equiv="Cache-Control" content="no-store"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body onload="startPoll()">
+<div id="control_panel">
+    <input type="button" value="开始监听" onclick="startWatch()"/>
+    <input type="button" value="结束监听" onclick="stopWatch()"/>
+    <input type="button" value="清空日志" onclick="clearLog()"/>
+    <span>显示行数:</span>
+    <input id="num_input" type="text" value="500" size="6"/>
+    <span>选择日志文件:</span>
+    <select id="log_file" onchange="startWatch()"></select>
+    <input type="checkbox" onchange="changeType(this)"/>
+    <span>路径</span> <br/>
+    <input type="button" value="添加过滤器" onclick="addFilter()"/><br/>
+
+    <div>
+        <div>已添加的过滤器</div>
+
+        <div id="filter_panel"></div>
+    </div>
+</div>
+
+<div id="main_panel"></div>
+
+</body>
+</html>
